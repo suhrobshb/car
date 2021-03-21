@@ -1,0 +1,49 @@
+CREATE SCHEMA `project_schema` ;
+
+CREATE TABLE cars (
+    id VARCHAR(255) NOT NULL AUTO_INCREMENT,
+    active VARCHAR(2),
+    year INT,
+    mileage INT,
+    price INT,
+    make_id VARCHAR(255),
+    model_id VARCHAR(255),
+    submodel_id VARCHAR(255),
+    body_type VARCHAR(255),
+    transmission VARCHAR(255),
+    fuel_type VARCHAR(255),
+    exterior_color VARCHAR(255),
+    created_at VARCHAR(255),
+    updated_at VARCHAR(255),
+    empty VARCHAR(255)
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE makes (
+    id VARCHAR(255) NOT NULL AUTO_INCREMENT,
+    name VARCHAR(100),
+    active VARCHAR(20),
+    created_at VARCHAR(255),
+    updated_at VARCHAR(255),
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE models (
+    id VARCHAR(255) NOT NULL AUTO_INCREMENT,
+    name VARCHAR(100),
+    active VARCHAR(20),
+    make_id VARCHAR(20),
+    created_at VARCHAR(255),
+    updated_at VARCHAR(255),
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE submodels (
+    id VARCHAR(255) NOT NULL AUTO_INCREMENT,
+    name VARCHAR(100),
+    active VARCHAR(20),
+    model_id VARCHAR(255),
+    created_at VARCHAR(255),
+    updated_at VARCHAR(255),
+    PRIMARY KEY (id)
+);
